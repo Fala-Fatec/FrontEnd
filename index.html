@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fala! Fatec</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="icon" type="image/x-icon" href="img/falafatec.logo.png">
+</head>
+<body class="bg-quadriculado">
+
+
+  <header class="navbar-container">
+    <div class="navbar">
+      <button class="nav-btn font-pop">
+        <img src="img/menu.index.png" alt="menu" class="btn-img">
+      </button>
+      
+      <div class="logo-container">
+       
+        <img src="img/falafatec.logo.png" alt="fala! fatec logo" class="logo-img">
+      </div>
+
+      <button class="nav-btn font-pop">
+        <img src="img/mnConta.index.png" alt="minha conta" class="btn-img">
+      </button>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+  
+    <section class="post-section">
+      <div class="post-form-container">
+        <h2 class="title-post">Hoje eu quero falar de...</h2>
+        
+        <div class="textarea-wrapper">
+          <textarea id="postText" placeholder="Escreva seu comentário aqui..."></textarea>
+        </div>
+
+        <div class="post-controls">
+          <select id="categoriaSelect" class="btn-select">
+            <option value="" disabled selected>Categoria</option>
+            <option value="estrutura">Estrutura</option>
+            <option value="laboratorios">Laboratórios</option>
+            <option value="cantina">Cantina</option>
+          </select>
+
+          <select id="tipoSelect" class="btn-select">
+            <option value="" disabled selected>Tipo</option>
+            <option value="feedback">Feedback</option>
+            <option value="sugestao">Sugestão</option>
+          </select>
+
+          <button id="btnPostar" class="btn-postar">Postar</button>
+        </div>
+      </div>
+
+      <div class="stickers-container">
+        <div class="sticker sticker-laboratorios">
+          <span>laboratórios</span>
+          <img src="img/lab.fig.png" alt="laboratórios" class="sticker-img">
+        </div>
+        <div class="sticker sticker-cantina">
+          <span>Cantina</span>
+          <img src="img/cantina.fig.png" alt="cantina" class="sticker-img">
+        </div>
+        <div class="sticker sticker-estrutura">
+          <span>estrutura</span>
+          <img src="img/infra.fig.png" alt="estrutura" class="sticker-img">
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="feed-grid">
+      
+     
+      <div class="feed-column">
+        <h2 class="column-title feedback-title">
+          <span class="star-icon"></span> feedbacks
+        </h2>
+        
+        <div id="feedbacksList" class="cards-container">
+     
+          <article class="post-card">
+            <div class="card-avatar">
+             
+               <img src="img/avatar.png" alt="avatar" class="avatar-img">
+            </div>
+            <div class="card-content">
+              <p class="card-text">A nova cantina está linda!!</p>
+              <div class="card-reactions">
+                <button class="btn-reaction btn-apoiado">Apoiado!</button>
+                <button class="btn-reaction btn-discordo">Discordo</button>
+                <button class="btn-reaction btn-gag">Fiquei GAG</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <div class="card-avatar">
+              <img src="img/avatar.png" alt="avatar" class="avatar-img">
+            </div>
+            <div class="card-content">
+              <p class="card-text">FALTA CATUPIRY A COXINHA!!</p>
+              <div class="card-reactions">
+                <button class="btn-reaction btn-apoiado">Apoiado!</button>
+                <button class="btn-reaction btn-discordo">Discordo</button>
+                <button class="btn-reaction btn-gag">Fiquei GAG</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+  
+      <div class="feed-column">
+        <h2 class="column-title sugestoes-title">
+          <span class="exclamation-icon"></span> sugestões
+        </h2>
+        
+        <div id="sugestoesList" class="cards-container">
+          <!-- Card Exemplo -->
+            <div class="card-avatar">
+              <img src="img/avatar.png" alt="avatar" class="avatar-img">
+            </div>
+            <div class="card-content">
+              <p class="card-text">A nova cantina está linda!!</p>
+              <div class="card-reactions">
+                <button class="btn-reaction btn-apoiado">Apoiado!</button>
+                <button class="btn-reaction btn-discordo">Discordo</button>
+                <button class="btn-reaction btn-gag">Fiquei GAG</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
