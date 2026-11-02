@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="Css/meu -perfil.css">
   <link rel="icon" type="image/x-icon" href="img/falafatec.logo.png">
 </head>
-<body class="bg-quadriculado">
+<body class="bg-quadriculado" data-auth-required="true">
   <header class="navbar-container">
     <div class="navbar">
       <nav class="primary-nav" aria-label="Navegação principal">
@@ -53,15 +53,7 @@
           <label class="profile-field"><span>Período</span><input type="text" name="period"></label>
         </div>
 
-        <fieldset class="profile-interests">
-          <legend>Meus interesses</legend>
-          <div class="interest-grid">
-            <label class="interest-placeholder"><input type="checkbox" name="interests" value="estrutura"><img src="img/infra.fig.png" alt="Estrutura" aria-hidden="true"></span><span>Estrutura</span></label>
-            <label class="interest-placeholder"><input type="checkbox" name="interests" value="laboratorios"><img src="img/lab.fig.png" alt="Laboratórios" aria-hidden="true"></span><span>Laboratórios</span></label>
-            <label class="interest-placeholder"><input type="checkbox" name="interests" value="cantina"><img src="img/cantina.fig.png" alt="Cantina" aria-hidden="true"></span><span>Cantina</span></label>
-            <label class="interest-placeholder"><input type="checkbox" name="interests" value="eventos"><img src="img/eventos.png" alt="Eventos" aria-hidden="true"></span><span>Eventos</span></label>
-          </div>
-        </fieldset>
+        
         <div class="profile-form-actions">
           <button class="profile-save-button" type="submit">Salvar alterações</button>
           <p id="profileSaveStatus" class="profile-save-status" role="status" aria-live="polite"></p>
@@ -69,6 +61,7 @@
       </form>
     </section>
   </main>
+  <script src="js/auth.js"></script>
   <script src="js/perfil.js"></script>
 </body>
 </html>

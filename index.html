@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="Css/navigation.css">
   <link rel="icon" type="image/x-icon" href="img/falafatec.logo.png">
 </head>
-<body class="bg-quadriculado">
+<body class="bg-quadriculado" data-auth-required="true">
 
 
   <header class="navbar-container">
@@ -83,7 +83,7 @@
       <div class="trending-carousel" role="region" aria-label="Publicações em alta">
         <button id="trendPrevious" class="trend-arrow" type="button" aria-label="Publicação anterior">‹</button>
         <article class="trend-slide" aria-live="polite">
-          <!-- Troque este espaço por uma imagem: <img id="trendArtwork" class="trend-artwork" src="img/sua-imagem.png" alt="Descrição da imagem"> -->
+          
           <div id="trendArtwork" class="trend-artwork" role="img" aria-label="Espaço reservado para a imagem da publicação"></div>
           <div class="trend-content">
             <h2 id="trendTitle" class="trend-title"></h2>
@@ -215,6 +215,7 @@
 
   </main>
 
+  <script src="js/auth.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

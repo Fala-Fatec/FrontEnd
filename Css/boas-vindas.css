@@ -1,0 +1,225 @@
+
+:root {
+  font-family: 'Fredoka', sans-serif;
+  color: #263248;
+  background: #f4f6f8;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f6f8;
+  background-image:
+    linear-gradient(#d3dbe3 1px, transparent 1px),
+    linear-gradient(90deg, #d3dbe3 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.welcome-page {
+  width: min(100% - 32px, 760px);
+  margin: 28px auto 44px;
+  padding: clamp(22px, 5vw, 42px);
+  background: rgb(255 255 255 / 62%);
+}
+
+.welcome-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px;
+  align-items: center;
+  gap: 22px;
+}
+
+.welcome-intro h1 {
+  margin: 0 0 3px;
+  color: #263248;
+  font-size: clamp(1.8rem, 5vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.welcome-intro h1 span {
+  color: #00a9b5;
+}
+
+.welcome-intro p,
+.welcome-section p {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.attention-art-placeholder,
+.attention-person-placeholder {
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.welcome-event-image {
+  display: block;
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.welcome-section {
+  margin-top: 24px;
+}
+
+.welcome-section h2 {
+  margin: 0 0 8px;
+  color: #263248;
+  font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+  line-height: 1.15;
+}
+
+.tips-content {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.welcome-opportunity-image {
+  display: block;
+  width: 82px;
+  height: 64px;
+  flex: 0 0 82px;
+  object-fit: contain;
+}
+
+.attention-art-placeholder,
+.attention-person-placeholder {
+  border: 2px dashed #00a9b5;
+  background: #eaf8f8;
+  color: #007f8b;
+}
+
+.attention-section {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) 110px;
+  align-items: end;
+  gap: 16px;
+  margin-top: 50px;
+}
+
+.attention-art-placeholder {
+  min-height: 100px;
+  align-self: center;
+  border-color: #b83434;
+  background: #fff1ef;
+  color: #9f2525;
+}
+
+.attention-copy h2 {
+  margin: 0 0 8px;
+  color: #bd6b39;
+  font-family: 'Comic Neue', 'Fredoka', sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.attention-caption {
+  margin: 0 0 16px;
+  font-size: 0.83rem;
+  line-height: 1.3;
+}
+
+.attention-message {
+  margin: 0;
+  color: #171717;
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  font-weight: 600;
+  line-height: 1.28;
+}
+
+.attention-person-placeholder {
+  min-height: 170px;
+  border-radius: 42% 42% 4px 4px;
+}
+
+.welcome-footer {
+  margin-top: 18px;
+}
+
+.welcome-footer p {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.start-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  background: #4a3b4e;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.start-button:hover {
+  background: #352a38;
+}
+
+@media (max-width: 560px) {
+  .welcome-page {
+    width: min(100% - 20px, 480px);
+    margin-top: 18px;
+    padding: 20px 17px;
+  }
+
+  .welcome-intro {
+    grid-template-columns: minmax(0, 1fr) 82px;
+    gap: 12px;
+  }
+
+  .welcome-event-image {
+    width: 82px;
+    height: 78px;
+  }
+
+  .attention-section {
+    grid-template-columns: 60px minmax(0, 1fr) 72px;
+    gap: 9px;
+    margin-top: 38px;
+  }
+
+  .attention-art-placeholder {
+    min-height: 76px;
+    font-size: 0.64rem;
+  }
+
+  .attention-person-placeholder {
+    min-height: 125px;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .attention-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .attention-art-placeholder {
+    display: none;
+  }
+
+  .attention-copy {
+    grid-column: 1;
+  }
+
+  .attention-person-placeholder {
+    grid-column: 2;
+  }
+}

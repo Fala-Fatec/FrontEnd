@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4a3b4e">
+  <title>Entrar | Fala! Fatec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/login.css">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card" aria-labelledby="loginTitle">
+      <img class="brand-logo" src="img/falafatec.logo.png" alt="Fala! Fatec">
+      <p class="eyebrow">Fala! Fatec</p>
+      <h1 id="loginTitle">Que bom ter você aqui!</h1>
+      <p class="login-intro">Entre para conversar, compartilhar ideias e fazer parte da comunidade.</p>
+
+      <form id="loginForm" class="login-form">
+        <label for="username">Usuário</label>
+        <input id="username" name="username" type="text" autocomplete="username" placeholder="Digite seu usuário" required>
+
+        <label for="password">Senha</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required>
+
+        <p id="loginError" class="login-error" role="alert" aria-live="polite"></p>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="demo-credentials">Acesso de demonstração: <strong>aluno</strong> / <strong>123456</strong></p>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+</body>
+</html>
