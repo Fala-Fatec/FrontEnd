@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu perfil | Fala! Fatec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/navigation.css">
+  <link rel="stylesheet" href="Css/meu -perfil.css">
+  <link rel="icon" type="image/x-icon" href="img/falafatec.logo.png">
+</head>
+<body class="bg-quadriculado">
+  <header class="navbar-container">
+    <div class="navbar">
+      <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="minha-conta.html">Minhas Falas</a>
+        <a href="meu-perfil.html" aria-current="page">Meu perfil</a>
+      </nav>
+      <a class="logo-container" href="index.html" aria-label="Voltar ao início">
+        <img src="img/falafatec.logo.png" alt="Fala! Fatec" class="logo-img">
+      </a>
+      <a class="nav-btn account-link" href="minha-conta.html" aria-label="Minha conta">
+        <img src="img/mnConta.index.png" alt="" class="btn-img">
+      </a>
+    </div>
+  </header>
+
+  <main class="profile-page">
+    <section class="profile-card" aria-labelledby="profileTitle">
+      <div class="profile-hero">
+        <div class="profile-photo-area">
+          <img id="profilePhoto" class="profile-photo" src="img/avatar.png" alt="Foto do perfil">
+          <input id="profilePhotoInput" class="visually-hidden" type="file" accept="image/*">
+          <label class="profile-upload-button" for="profilePhotoInput">Subir nova foto</label>
+        </div>
+        <h1 id="profileTitle" class="profile-title"><span>Meu</span><span>Perfil</span></h1>
+      </div>
+
+      <form id="profileForm" class="profile-form">
+        <h2>Meus dados</h2>
+        <div class="profile-fields">
+          <label class="profile-field"><span>Nome</span><input type="text" name="name" autocomplete="name"></label>
+          <label class="profile-field"><span>Curso</span><input type="text" name="course"></label>
+          <label class="profile-field"><span>E-mail</span><input type="email" name="email" autocomplete="email"></label>
+          <label class="profile-field"><span>RA</span><input type="text" name="studentId"></label>
+          <label class="profile-field"><span>Cidade</span><input type="text" name="city"></label>
+          <label class="profile-field"><span>Semestre</span><input type="text" name="semester"></label>
+          <label class="profile-field"><span>Telefone</span><input type="tel" name="phone" autocomplete="tel"></label>
+          <label class="profile-field"><span>Período</span><input type="text" name="period"></label>
+        </div>
+
+        <fieldset class="profile-interests">
+          <legend>Meus interesses</legend>
+          <div class="interest-grid">
+            <label class="interest-placeholder"><input type="checkbox" name="interests" value="estrutura"><img src="img/infra.fig.png" alt="Estrutura" aria-hidden="true"></span><span>Estrutura</span></label>
+            <label class="interest-placeholder"><input type="checkbox" name="interests" value="laboratorios"><img src="img/lab.fig.png" alt="Laboratórios" aria-hidden="true"></span><span>Laboratórios</span></label>
+            <label class="interest-placeholder"><input type="checkbox" name="interests" value="cantina"><img src="img/cantina.fig.png" alt="Cantina" aria-hidden="true"></span><span>Cantina</span></label>
+            <label class="interest-placeholder"><input type="checkbox" name="interests" value="eventos"><img src="img/eventos.png" alt="Eventos" aria-hidden="true"></span><span>Eventos</span></label>
+          </div>
+        </fieldset>
+        <div class="profile-form-actions">
+          <button class="profile-save-button" type="submit">Salvar alterações</button>
+          <p id="profileSaveStatus" class="profile-save-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

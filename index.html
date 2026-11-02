@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/navigation.css">
   <link rel="icon" type="image/x-icon" href="img/falafatec.logo.png">
 </head>
 <body class="bg-quadriculado">
@@ -16,18 +17,17 @@
 
   <header class="navbar-container">
     <div class="navbar">
-      <button class="nav-btn font-pop">
-        <img src="img/menu.index.png" alt="menu" class="btn-img">
-      </button>
-      
+      <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="minha-conta.html">Minhas Falas</a>
+        <a href="meu-perfil.html">Meu perfil</a>
+      </nav>
       <div class="logo-container">
-       
         <img src="img/falafatec.logo.png" alt="fala! fatec logo" class="logo-img">
       </div>
-
-      <button class="nav-btn font-pop">
-        <img src="img/mnConta.index.png" alt="minha conta" class="btn-img">
-      </button>
+      <a class="nav-btn account-link" href="minha-conta.html" aria-label="Minha conta">
+        <img src="img/mnConta.index.png" alt="" class="btn-img">
+      </a>
     </div>
   </header>
 
@@ -75,7 +75,41 @@
       </div>
     </section>
 
-  
+    <section class="trending-section" aria-labelledby="trendingTitle">
+      <div class="trending-heading">
+        <img id="trendingTitle" class="trending-logo" src="img/emAlta.png" alt="Em alta">
+      </div>
+
+      <div class="trending-carousel" role="region" aria-label="Publicações em alta">
+        <button id="trendPrevious" class="trend-arrow" type="button" aria-label="Publicação anterior">‹</button>
+        <article class="trend-slide" aria-live="polite">
+          <!-- Troque este espaço por uma imagem: <img id="trendArtwork" class="trend-artwork" src="img/sua-imagem.png" alt="Descrição da imagem"> -->
+          <div id="trendArtwork" class="trend-artwork" role="img" aria-label="Espaço reservado para a imagem da publicação"></div>
+          <div class="trend-content">
+            <h2 id="trendTitle" class="trend-title"></h2>
+            <p id="trendDescription" class="trend-description"></p>
+            <div class="trend-reactions" aria-label="Reações">
+              <div class="trend-reaction">
+                <span id="trendSupportedCount" class="trend-count"></span>
+                <button class="btn-reaction btn-apoiado trend-vote" type="button" data-trend-reaction="supported" aria-pressed="false">Apoiado!</button>
+              </div>
+              <div class="trend-reaction">
+                <span id="trendDisagreedCount" class="trend-count"></span>
+                <button class="btn-reaction btn-discordo trend-vote" type="button" data-trend-reaction="disagreed" aria-pressed="false">Discordo</button>
+              </div>
+              <div class="trend-reaction">
+                <span id="trendGaggedCount" class="trend-count"></span>
+                <button class="btn-reaction btn-gag trend-vote" type="button" data-trend-reaction="gagged" aria-pressed="false">Fiquei GAG</button>
+              </div>
+            </div>
+            <p id="trendPosition" class="trend-position" aria-label="Posição no carrossel"></p>
+          </div>
+        </article>
+        <button id="trendNext" class="trend-arrow" type="button" aria-label="Próxima publicação">›</button>
+      </div>
+    </section>
+
+
     <section class="feed-grid">
       
      
@@ -141,6 +175,44 @@
       </div>
 
     </section>
+
+    <section class="categories-section" aria-labelledby="categoriesTitle">
+      <h2 class="categories-heading">
+        <img id="categoriesTitle" class="categories-logo" src="img/categoria.png" alt="Categorias">
+      </h2>
+
+      <div class="categories-grid">
+        <article class="category-card category-structure">
+          <img class="category-image-placeholder" src="img/infra.fig.png" alt="Imagem de estrutura">
+          <h3>estrutura</h3>
+        </article>
+        <article class="category-card category-labs">
+          <img class="category-image-placeholder" src="img/lab.fig.png" alt="Imagem dos laboratórios">
+          <h3>laboratórios</h3>
+        </article>
+        <article class="category-card category-library">
+          <img class="category-image-placeholder" src="img/biblio.png" alt="Imagem da biblioteca">
+          <h3>biblioteca</h3>
+        </article>
+        <article class="category-card category-service">
+          <img class="category-image-placeholder" src="img/att.png" alt="Imagem de atendimento">
+          <h3>atendimento</h3>
+        </article>
+        <article class="category-card category-opportunities">
+          <img class="category-image-placeholder" src="img/oportu.png" alt="Imagem de oportunidades">
+          <h3>oportunidades</h3>
+        </article>
+        <article class="category-card category-canteen">
+          <img class="category-image-placeholder" src="img/cantina.fig.png" alt="Imagem da cantina">
+          <h3>cantina</h3>
+        </article>
+        <article class="category-card category-events">
+          <img class="category-image-placeholder" src="img/evento.png" alt="Imagem de eventos">
+          <h3>eventos</h3>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <script src="js/script.js"></script>
