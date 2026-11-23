@@ -19,8 +19,8 @@
       <p class="login-intro">Entre para conversar, compartilhar ideias e fazer parte da comunidade.</p>
 
       <form id="loginForm" class="login-form">
-        <label for="username">Usuário</label>
-        <input id="username" name="username" type="text" autocomplete="username" placeholder="Digite seu usuário" required>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="Digite seu e-mail" required>
 
         <label for="password">Senha</label>
         <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required>
@@ -28,10 +28,10 @@
         <p id="loginError" class="login-error" role="alert" aria-live="polite"></p>
         <button type="submit">Entrar</button>
       </form>
-
-      <p class="demo-credentials">Acesso de demonstração: <strong>aluno</strong> / <strong>123456</strong></p>
     </section>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.min.js"></script>
   <script src="js/auth.js"></script>
 </body>
 </html>
